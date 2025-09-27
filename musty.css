@@ -1,0 +1,233 @@
+/* style.css */
+/* ====================
+   GLOBAL STYLES
+   ==================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; line-height: 1.6; background: #f9fafb; color: #111827; transition: background 0.3s, color 0.3s; overflow-x: hidden; }
+header, section, footer { max-width: 1100px; margin: auto; padding: 2rem; }
+
+/* ====================
+   HEADER
+   ==================== */
+header { display: flex; justify-content: space-between; align-items: center; animation: fadeDown 1s ease; }
+header h1 { font-size: 1.2rem; font-weight: 700; }
+header p { font-size: 0.85rem; opacity: 0.7; }
+nav a { margin-left: 1rem; text-decoration: none; font-weight: 600; color: inherit; transition: color 0.3s; }
+nav a:hover { color: #4f46e5; }
+nav a.cta { background: #4f46e5; color: #fff; padding: 0.5rem 1rem; border-radius: 0.5rem; transition: transform 0.3s; }
+nav a.cta:hover { transform: translateY(-3px); }
+
+/* ====================
+   HERO
+   ==================== */
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; padding: 4rem 2rem; }
+.hero h2 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; animation: fadeUp 1s ease; }
+.hero p { margin-top: 1rem; opacity: 0.8; animation: fadeUp 1.5s ease; }
+.hero-buttons { margin-top: 1.5rem; animation: fadeUp 2s ease; }
+.hero img { width: 100%; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); animation: float 4s ease-in-out infinite; }
+
+/* ====================
+   ABOUT
+   ==================== */
+.about p { opacity: 0.85; animation: fadeUp 1s ease; }
+
+/* ====================
+   PROJECTS
+   ==================== */
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.project-card { background: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; animation: fadeUp 1s ease; }
+.project-card:hover { transform: scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.project-card img { width: 100%; height: 180px; object-fit: cover; }
+.project-card .content { padding: 1rem; }
+
+.bio {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2c3e50; /* dark professional text */
+  background-color: #f4f6f7; /* subtle light gray background */
+  padding: 20px;
+  border-left: 5px solid #0077b6; /* corporate accent line */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* ====================
+   SKILLS
+   ==================== */
+/* Base styles */
+.skill-bar {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+  margin-bottom: 12px;
+}
+
+/* Individual containers */
+
+.skill-bar {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.html-bar { background: #ffe0e0; }
+.css-bar  { background: #e0f7fa; }
+.js-bar   { background: #fff3e0; }
+.react-bar{ background: #e8eaf6; }
+.node-bar { background: #e0f2f1; }
+
+.skill-level {
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 0; /* Start at 0 for animation */
+  transition: width 2s ease;
+}
+
+.html  { background: #4f46e5; }
+.css   { background: #4f46e5; }
+.js    { background: #4f46e5; }
+.react { background: #4f46e5; }
+.node  { background: #4f46e5; }
+.Py    { background: #4f46e5; }
+
+/* ====================
+   CONTACT
+   ==================== */
+.contact form { display: grid; gap: 1rem; animation: fadeUp 1s ease; }
+.contact input, .contact textarea { width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #d1d5db; transition: border 0.3s; }
+.contact input:focus, .contact textarea:focus { border-color: #4f46e5; outline: none; }
+.contact button { background: #4f46e5; color: #fff; padding: 0.75rem; border: none; border-radius: 0.5rem; cursor: pointer; transition: transform 0.3s; }
+.contact button:hover { transform: translateY(-3px); }
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 40px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Social Links Styling */
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 50px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Social Links Styling */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.social-icon {
+  .social-icon.whatsapp {
+  color: #25D366; /* WhatsApp green */
+}
+
+.social-icon.whatsapp:hover {
+  color: #128C7E; /* Darker green on hover */
+}
+
+}
+
+.social-icon:hover {
+  color: #25D366; /* WhatsApp green */
+}
+
+.whatsapp {
+  color: #25D366; /* WhatsApp green by default if you want */
+}
+
+/* Platform Colors */
+.social-links a.instagram {
+  background: linear-gradient(45deg, #fd1d1d, #fcb045, #833ab4);
+}
+
+.social-links a.x {
+  background: #000; /* X official black */
+}
+
+.social-links a.facebook {
+  background: #1877f2;
+}
+
+/* Hover Effects */
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+
+
+/* Hover Effects */
+
+
+/* ====================
+   FOOTER
+   ==================== */
+footer { text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 3rem; animation: fadeUp 1s ease; }
+
+/* ====================
+   ANIMATIONS
+   ==================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes growBar {
+  from { width: 0; }
+  to { width: 100%; }
+}

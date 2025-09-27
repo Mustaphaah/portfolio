@@ -1,0 +1,229 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustapha Ahmed - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="musty.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <h1>Mustapha Ahmed</h1>
+      <p>Web & App Developer</p>
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="cta">Hire Me</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>I build elegant, user-friendly web & mobile experiences.</h2>
+      <p class="bio">I'm a software engineer who turns ideas into polished products — from prototypes to production-ready systems.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="cta">View My Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <!-- Change the image below by replacing the URL with your own photo -->
+      <img src="musty images\WhatsApp Image 2025-09-16 at 15.54.43_deb573c0.jpg" alt="Mustapha Ahmed">
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h3>About</h3>
+  <p class="bio">My name is Mustapha Ahmed, born on July 31, 2004. I completed my primary and secondary education at Al-Cimfa International Schools. I later received training in software and web development at the Berekete Bootcamp in Abuja. I am currently pursuing a Bachelor’s degree in Computer Science at Prince Abubakar Audu University, Anyigba, Kogi State.
+</p>
+<h3>Academic background</h3>
+<ul>
+  <li>Al-cimfa International Schools</li>
+  <li>Prince Abubakar Audu University Ayingba kogi state </li>
+</ul>
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h3>Selected Projects</h3>
+    <div class="projects">
+      <!-- Project Card Example: Replace image src and text with your own -->
+      <div class="project-card">
+        <img src="musty images\logo g.png" alt="Acme Hotel Finder">
+        <div class="content">
+          <h4>Acme Hotel Finder</h4>
+          <p>Responsive booking UI + mapping integration. Search, filter, book.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="musty images\logo2.jpg" alt="FitTrack App">
+        <div class="content">
+          <h4>FitTrack App</h4>
+          <p>Cross-platform workout tracker with progress charts and sharing.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="musty images\download.png" alt="Portfolio CMS">
+        <div class="content">
+          <h4>Portfolio CMS</h4>
+          <p>A lightweight headless CMS for creators with markdown support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+<section id="skills">
+  <div class="skill">
+    <p>HTML</p>
+    <div class="skill-bar html-bar">
+      <div class="skill-level html"><span>95%</span></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="skill-bar css-bar">
+      <div class="skill-level css"><span>90%</span></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="skill-bar js-bar">
+      <div class="skill-level js"><span>85%</span></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>React</p>
+    <div class="skill-bar react-bar">
+      <div class="skill-level react"><span>80%</span></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>Node.js</p>
+    <div class="skill-bar node-bar">
+      <div class="skill-level node"><span>80%</span></div>
+    </div>
+  <div class="skill">
+    <p>Python</p>
+    <div class="skill-bar Py-bar">
+      <div class="skill-level Py "><span>80%</span></div>
+    </div>
+  </div>  
+  </div>
+</section>
+
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h3>Email Me</h3>
+    <form>
+      <!-- Contact Form -->
+<form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+  <label>
+    Your Name:
+    <input type="text" name="name" required>
+  </label>
+  <br><br>
+  <label>
+    Your Email:
+    <input type="email" name="_replyto" required>
+  </label>
+  <br><br>
+  <label>
+    Your Message:
+    <textarea name="message" required></textarea>
+  </label>
+  <br><br>
+  <button type="submit">Send</button>
+</form>
+
+<!-- Messages -->
+<p id="form-status"></p>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      let response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = "✅ Message sent! Thanks for reaching out.";
+        form.reset();
+      } else {
+        status.textContent = "❌ Oops! Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      status.textContent = "❌ Failed to send. Check your internet connection.";
+    }
+  });
+</script>
+
+      <div class="contact-section">
+  <h2>My Socials</h2>
+  <div class="contact-section">
+  <div class="social-links">
+    <a href="https://www.instagram.com/gent_uu39" target="_blank" class="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://x.com/Coach_Gentle?t=9XYhdf2TGsR2yvT7CQthlw&s=08" target="_blank" class="x">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61559302434146" target="_blank" class="facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+ <!-- WhatsApp social icon link -->
+<a href="https://wa.me/2348020529260" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="green">
+    <path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.373 0 0 5.373 0 12c0 2.115.555 4.087 1.61 5.86L0 24l6.47-1.63A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.2-1.25-6.165-3.48-8.52zM12 21.5c-1.74 0-3.46-.45-4.97-1.31l-.36-.2-3.84.97 1.03-3.75-.25-.38C2.94 15.06 2.5 13.55 2.5 12 2.5 6.76 6.76 2.5 12 2.5c2.5 0 4.85.97 6.63 2.72A9.34 9.34 0 0 1 21.5 12c0 5.24-4.26 9.5-9.5 9.5zm4.02-6.37c-.22-.11-1.3-.64-1.5-.71-.2-.07-.34-.11-.48.11s-.55.71-.68.86c-.13.15-.25.17-.47.06-.22-.11-.93-.34-1.77-1.08-.65-.58-1.09-1.29-1.22-1.51-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.36.07-.14.04-.26-.02-.36-.06-.11-.48-1.16-.66-1.58-.17-.42-.35-.36-.48-.37l-.41-.01c-.14 0-.36.05-.55.26s-.72.7-.72 1.7c0 1 .74 1.97.84 2.11.11.15 1.45 2.3 3.53 3.23.49.21.87.34 1.17.44.49.16.94.14 1.29.1.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.19-.13-.41-.24z"></path>
+  </svg>
+</a>
+
+
+  </div>
+</div>
+
+</div>
+
+</div>
+    </form>
+    
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Mustapha Ahmed — Built with care.
+  </footer>
+
+  <script>
+    // Auto update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="musty.js"></script>
+
+</body>
+</html>
+
+
